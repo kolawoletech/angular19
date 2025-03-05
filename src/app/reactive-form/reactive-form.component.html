@@ -1,0 +1,38 @@
+<div class="form-container">
+    <h2>Reactive Form Example</h2>
+  
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+      
+      <!-- Name Field -->
+      <label for="name">Name:</label>
+      <input id="name" type="text" formControlName="name" />
+      @if (name?.invalid && name?.touched) {
+        <span class="error">Name is required and must be at least 3 characters.</span>
+      }
+  
+      <!-- Email Field -->
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" />
+      @if (email?.invalid && email?.touched) {
+        <span class="error">Please enter a valid email.</span>
+      }
+  
+      <!-- Password Field -->
+      <label for="password">Password:</label>
+      <input id="password" type="password" formControlName="password" />
+      @if (password?.invalid && password?.touched) {
+        <span class="error">Password must be at least 6 characters.</span>
+      }
+  
+      <!-- Confirm Password Field -->
+      <label for="confirmPassword">Confirm Password:</label>
+      <input id="confirmPassword" type="password" formControlName="confirmPassword" />
+      @if (confirmPassword?.invalid && confirmPassword?.touched) {
+        <span class="error">Confirm Password is required.</span>
+      }
+  
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="userForm.invalid">Submit</button>
+    </form>
+  </div>
+  
