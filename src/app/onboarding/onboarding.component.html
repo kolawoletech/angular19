@@ -1,10 +1,15 @@
 <div class="onboarding-container">
     <router-outlet></router-outlet>
-
+  
     <!-- Progress Bar -->
     <div class="progress-container">
-        <h1>Onboarding Works</h1>
-        <div class="progress-bar" [style.width]="(currentStep$ | async) ? (currentStep$ | async)! * 12.5 + '%' : '0%'">
-        </div>
+      <div class="progress-bar" [style.width]="(currentStep$ | async)! * (100 / steps.length) + '%'"></div>
     </div>
-</div>
+  
+    <!-- Navigation Buttons -->
+    <div class="onboarding-nav">
+      <button (click)="prevStep()" [disabled]="(currentStep$ | async) === 0">Back</button>
+      <button (click)="nextStep()">Continue</button>
+    </div>
+  </div>
+  

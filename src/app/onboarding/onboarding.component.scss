@@ -10,11 +10,30 @@
     height: 5px;
     border-radius: 5px;
     overflow: hidden;
+    margin-top: 10px;
   }
   
   .progress-bar {
     height: 100%;
     background: blue;
     transition: width 0.3s ease-in-out;
+  }
+  
+  .onboarding-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
   }
   
