@@ -1,0 +1,20 @@
+.onboarding-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .progress-container {
+    width: 100%;
+    background: #eee;
+    height: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: blue;
+    transition: width 0.3s ease-in-out;
+  }
+  

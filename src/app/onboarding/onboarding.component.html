@@ -1,0 +1,10 @@
+<div class="onboarding-container">
+    <router-outlet></router-outlet>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <h1>Onboarding Works</h1>
+        <div class="progress-bar" [style.width]="(currentStep$ | async) ? (currentStep$ | async)! * 12.5 + '%' : '0%'">
+        </div>
+    </div>
+</div>

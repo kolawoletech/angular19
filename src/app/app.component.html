@@ -232,7 +232,7 @@
     <div class="right-side">
       <div class="pill-group">
         @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
+          { title: 'Explore the Docs', link: '/form' },
           { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
           { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
           { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
@@ -259,9 +259,18 @@
           </a>
        
         }
-          <a routerLink="/crud">CRUD</a>
-          <a routerLink="/form">FORM</a>
+        <div class="pill-group">
+          <a [routerLink]="['/crud']" class="pill">CRUD Component</a>
+          <a [routerLink]="['/form']" class="pill">Form Component</a>
+        </div>
 
+        <nav>
+          <ul>
+            <li><a routerLink="/crud">CRUD</a></li>
+            <li><a routerLink="/form">Form</a></li>
+          </ul>
+        </nav>
+      
       </div>
       <div class="social-links">
         <a
